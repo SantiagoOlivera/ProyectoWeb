@@ -1,0 +1,32 @@
+/* submenu.css */
+.submenu{
+    clear: both;
+    width:100%;
+    height: auto;
+}
+.submenu-items{
+    list-style: none;
+    display: flex;
+    margin:0 auto;
+    max-width: 760px;
+}
+.submenu-item{
+    padding: 10px;
+    flex:1;
+    text-align: center;
+}
+.submenu-item a{
+    padding: 5px;
+    display: block;
+    border-radius: 5px;
+    color: var(--color-font);
+    border: 1px solid rgba(255, 204, 102,0.7);
+    max-width: 200px;
+}
+.submenu-item a:hover{
+    text-decoration: none;
+    background-color: var(--color-selected-menu-item);
+}
+.submenu-item a{
+    text-decoration: none;
+}

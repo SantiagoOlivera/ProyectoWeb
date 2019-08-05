@@ -1,0 +1,44 @@
+.contact-form{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1500px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+.contact-form-item{
+    margin:0 auto;
+    max-width: 720px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+}
+.form-item-label{
+    width: 100%;
+    margin: 0 auto;
+}
+.form-item-control input{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid orange;
+    height:50px;
+    border-radius: 10px;
+}
+.form-item-control textarea{
+    padding: 5px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    resize: none;
+    width: 100%;
+    height: 250px;
+}
+#sendEmail{
+    background-color:var(--color-principal);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid orange;
+    float: right;
+}
+#sendEmail:hover{
+    background-color:var( --color-active-menu-item);
+}

@@ -1,0 +1,40 @@
+/************ Content Como Ordenar ****************/
+.block2{
+    margin:0 auto;
+    max-width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+.block-child{
+    flex: 1;
+    margin: 10px;
+    border: 1px solid var(--color-principal);
+    border-radius: 0 50px 50px 50px;
+    padding-bottom: 30px;
+}
+.step{
+    height: auto;
+}
+.step h2{
+    text-align: center;
+}
+.step-number{
+    width:60px;
+    height:60px;
+    text-align:center;
+    background-color:var(--color-principal);
+    border-radius:0 0 30px 0;
+    padding-top:8px;
+    padding-right: 5px; 
+}
+.step-icon{
+    text-align: center;
+    font-size: 75px;
+}
+.step-description{
+    text-align: center;
+    margin: 10px;
+    font-size: 13px;
+    text-align: justify;
+}

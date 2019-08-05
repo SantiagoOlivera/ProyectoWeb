@@ -1,0 +1,24 @@
+/************ Content Quienes Somos****************/
+.block1{
+    max-width: 1000px;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+.block-image{
+    width: 50%;
+    padding: 5px;
+    height: auto;
+    flex-basis: 45%;
+}
+.block-image img{
+    width: 100%;
+    border-radius: 50px;
+}
+.block-text{
+    width: 50%;
+    padding: 15px;
+    text-align: justify;
+    flex-basis: 45%;
+}

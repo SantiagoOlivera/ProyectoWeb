@@ -1,0 +1,127 @@
+/**************** STATIC MENU **********************/
+.static-top-menu{
+    position: fixed;
+    width:100%;
+    background-color: var(--color-header);
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    border-bottom: 1px solid var(--color-principal);
+    height: auto;
+    z-index: 1;
+}
+/****************** MENU  *****************/
+.menu{
+    margin: 0;
+    height:130px;
+    display: flex;
+    height: auto;
+}
+.menu-image{
+    display: block;
+    width: 250px;
+    height: 100%;
+    margin:0 auto;
+    text-align: center;
+    padding-top:5px;  
+    padding-bottom: 5px;
+    flex:25%;
+}
+.menu-image img{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 3px solid var(--color-selected-menu-item);  
+}
+.logo{
+    margin-right: 50px;
+    float: right;
+    border: 1px solid black;
+    width: 200px;
+    height: 85px;
+    border-radius: 20px;
+    text-align: center;
+    font-size:30px;
+    padding-top: 25px; 
+}
+.logo a{ 
+    color:black;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+}
+.menu-list{
+    margin-top: 20px;
+    margin-right:20px;
+    list-style: none;
+    display: flex; 
+}
+.menu-items{
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+	max-width: 500px;
+    flex:50%;
+}
+.menu-item{
+    padding-left: 15px;
+    width: 125px;
+    flex: 1;
+}
+.menu-item a{
+    text-align: center;
+    /* padding: 0px 25px; */
+    text-decoration: none;
+    /* display: block; */
+    color: var(--color-font);
+    /* display: inline-block; */
+    font-size:30px;
+    
+    transition:0.2s ease-out;
+    /* border: 1px solid rgba(255, 204, 102,0.5); */
+    /* background-color: #ffe2a9;*/
+}
+/* .menu-item a:hover{
+    transform-origin : 0 100%; 0 scaleX(2);
+    border-bottom: 4px solid orange;
+} 
+.active-menu-item{
+    border-bottom: 4px solid orange;
+} */
+
+.menu-item a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: orange;
+    transition: width .3s;
+}
+.menu-item a:hover::after,
+.current a::after{
+    width: 100%;
+}
+
+/* .menu-items-first{
+    border-radius: 15px 0 0 15px;
+    border-right: 0 !important;
+}
+.menu-items-last{
+    border-radius: 0 15px 15px 0;
+    border-left: 0 !important;  
+}
+ */
+/* .menu-item a:hover{
+    background-color: var(--color-selected-menu-item);
+} */
+/***************** Icon Menu resposive *********************/
+.menu-items i{
+    display: none;
+    font-size: 35px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px; 
+    padding: 15px;
+    border: 3px solid var(--color-selected-menu-item);
+    border-radius: 10px;
+}
+.menu-items i:hover{
+    background-color: var(--color-selected-menu-item);
+}

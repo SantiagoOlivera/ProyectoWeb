@@ -1,0 +1,10 @@
+/* Fuente Menu */
+.menu li a{
+    font-size:30px;
+    font-family: 'Pacifico', cursive;
+}
+/* Fuente Headers */
+h1{
+    font-size:30px;
+    font-family: 'Pacifico', cursive;
+}
