@@ -1,7 +1,11 @@
 <div class="order-search">
     <form action="" method="GET">
-        <input type="text">
-        <input id="search" class="material-icons" type="submit" value="search">
+        <div class="form-item">
+            <input type="text">
+        </div>
+        <div class="form-item">
+            <input id="search" class="material-icons" type="submit" value="search">
+        </div>
     </form>
 </div>
 <div  class="order-list">
