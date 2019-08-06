@@ -20,13 +20,13 @@
 <div  class="block1" >
     <div class="block-image">
         <?php
-           if( file_exists( $_SERVER['DOCUMENT_ROOT'] . '/Proyecto web UTN/img/static-content/image-1.jpg')){
+           /* if( file_exists( $_SERVER['DOCUMENT_ROOT'] . '/Proyecto web UTN/img/static-content/image-1.jpg')){
                echo '<img src="./img/static-content/image-1.jpg" alt="">'; 
            }else{
                echo 'Recurso no disponible';
-           }  
+           }  */ 
         ?>
-        <!-- <img src="./img/static-content/image-1.jpg" alt=""> -->
+        <img src="./img/static-content/image-1.jpg" alt="">
     </div>
     <div class="block-text">
             <h1>Quienes Somos</h1>

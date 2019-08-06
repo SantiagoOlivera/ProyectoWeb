@@ -38,7 +38,10 @@
     }
     .slider-arrows{
         top:120px;
-    }    
+    }
+    .order-list{
+        grid-template-columns: 1fr 1fr;
+    }
    
 }
 
@@ -84,6 +87,10 @@
     .login-image{
         margin-right:5px;
     }
+    /******************* Pedidos Foods Grid ***********************/
+    .order-list{
+        grid-template-columns: 1fr;
+    }
     /********************** Content *************************/
     .block-image img{
         border-radius: 25px;
@@ -91,4 +98,5 @@
     .spacer{
         display: none;
     }
+    
 }

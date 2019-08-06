@@ -9,8 +9,11 @@
 @import "static-content/opinions.css";
 @import "static-content/slider.css";
 @import "swiper/swiper.css";
-@import "media/media.css";
 @import "pedidos/pedidos.css";
+
+/*Importar media css siempre al final*/
+@import "media/media.css";
+
 
 *{
     margin: 0;
