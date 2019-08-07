@@ -126,19 +126,20 @@ menuItems.forEach(
                     console.log(x.status);
                     if(x.status === 200 && x.readyState === 4){
                         pageContent.innerHTML =  x.responseText;
-                        
+                        //despues de cargar la pagina o imprimir el contenido de la misma
+                        if(element.getAttribute("value")=='inicio'){
+                            initSwiper1();
+                            initSwiper5();
+                        }
                     }
                 }
                 switch(element.getAttribute("value")){
                     case 'inicio':
-                        initSwiper1();
-                        initSwiper5();
                         cargarSubmenu('inicio');
                         x.open("GET", "./src/content/inicio/inicio.php" ,true);
                         x.send();
                     break;
                     case 'pedidos':
-                        initSwiper5();
                         cargarSubmenu('pedidos');
                         x.open("GET", "./src/content/pedidos/pedidos.php" ,true);
                         x.send();

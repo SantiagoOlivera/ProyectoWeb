@@ -38,4 +38,11 @@
         <h3>$ Precio</h3>
         <button id="addToOrderButton" class="add-to-order-button">Agregar al Pedido</button>
     </div>
+    <div class="food-item">
+        <img src="./img/foods/1.jpg" alt="">
+        <h2>Titulo</h2>
+        <p>Descripcion</p>
+        <h3>$ Precio</h3>
+        <button id="addToOrderButton" class="add-to-order-button">Agregar al Pedido</button>
+    </div>
 </div>
