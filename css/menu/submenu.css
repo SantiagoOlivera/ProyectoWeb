@@ -8,7 +8,7 @@
     list-style: none;
     display: flex;
     margin:0 auto;
-    max-width: 760px;
+    max-width: 500px;
 }
 .submenu-item{
     padding: 10px;
@@ -21,7 +21,8 @@
     border-radius: 5px;
     color: var(--color-font);
     border: 1px solid rgba(255, 204, 102,0.7);
-    max-width: 200px;
+    max-width: 150px;
+    margin: 0 auto;
 }
 .submenu-item a:hover{
     text-decoration: none;
