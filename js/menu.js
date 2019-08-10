@@ -1,10 +1,4 @@
 
-//menu constants
-var submenuItems = [
-     ['Quíenes Somos','Cómo Ordenar','Opiniones','Seguinos']
-    ,['Hace tu Pedido','Su Carro','Test']
-    ,['']
-];
 //cargar submenu
 let submenu = document.querySelector("#submenu");
 function cargarSubmenu(menu){
@@ -18,8 +12,7 @@ function cargarSubmenu(menu){
         break;
         case 'pedidos':
         submenu.innerHTML = `
-            <li class="submenu-item"><a href="#">Nuestra Carta</a></li>
-            <li class="submenu-item"><a href="#">Su Pedido</a></li>
+            <li id="cartPage" class="submenu-item"><a href="#">Su Pedido</a></li>
             <li class="submenu-item"><a href="#">Promos</a></li>
             `;
         break;
@@ -131,6 +124,7 @@ menuItems.forEach(
                             initSwiper1();
                             initSwiper5();
                         }
+                        
                     }
                 }
                 switch(element.getAttribute("value")){
@@ -143,6 +137,22 @@ menuItems.forEach(
                         cargarSubmenu('pedidos');
                         x.open("GET", "./src/content/pedidos/pedidos.php" ,true);
                         x.send();
+                        let cartPage = document.querySelector('#cartPage');
+                        cartPage.addEventListener(
+                            "click",
+                            () => {
+                                var x = new XMLHttpRequest();
+                                x.onreadystatechange = function (){
+                                    console.log(x.status);
+                                    if(x.status === 200 && x.readyState === 4){
+                                        pageContent.innerHTML =  x.responseText;
+                                    }
+                                }
+                                x.open("GET", "./src/content/pedidos/cart.php");
+                                x.send();
+                            }
+                           
+                        );
                     break;
                     case 'contacto':
                         cargarSubmenu('contacto');
