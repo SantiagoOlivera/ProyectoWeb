@@ -10,6 +10,7 @@
 @import "static-content/slider.css";
 @import "swiper/swiper.css";
 @import "pedidos/pedidos.css";
+@import "cart/cart.css";
 
 /*Importar media css siempre al final*/
 @import "media/media.css";
