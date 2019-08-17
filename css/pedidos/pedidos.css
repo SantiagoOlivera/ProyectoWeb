@@ -62,4 +62,7 @@
     background-color: white;
     border-radius:10px; 
 }
+.add-to-order-button:hover{
+    background-color: var(--color-principal);
+}
 

@@ -1,9 +1,15 @@
-var products = [];
-addToCart.AddEventListener(
+
+console.log("Test");
+let selectedProducts = [];
+
+addToOrderButton.AddEventListener(
     "click",
     () => {
-        var idProduct = document.querySelector("#idProdcuto");
+        var idProduct = addToOrderButton.getAttribute("value");
+        selectedProducts.push(idProduct);
+        console.log(idProduct);
+        console.log(selectedProducts); 
     }
 );
 
-localStorage.setItem("products", JSON.stringify(products) );
+//localStorage.setItem("products", JSON.stringify(products) );

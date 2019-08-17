@@ -1,4 +1,6 @@
+function loadScript(url, ){
 
+}
 //cargar submenu
 let submenu = document.querySelector("#submenu");
 function cargarSubmenu(menu){
@@ -123,8 +125,9 @@ menuItems.forEach(
                         if(element.getAttribute("value")=='inicio'){
                             initSwiper1();
                             initSwiper5();
+                        }else if(element.getAttribute("value")=='pedidos'){
+                            createOrdeListFunctionality();
                         }
-                        
                     }
                 }
                 switch(element.getAttribute("value")){
@@ -135,7 +138,7 @@ menuItems.forEach(
                     break;
                     case 'pedidos':
                         cargarSubmenu('pedidos');
-                        x.open("GET", "./src/content/pedidos/pedidos.php" ,true);
+                        x.open("GET", "./src/content/pedidos/pedidos.php" , true);
                         x.send();
                         let cartPage = document.querySelector('#cartPage');
                         cartPage.addEventListener(
@@ -146,6 +149,7 @@ menuItems.forEach(
                                     console.log(x.status);
                                     if(x.status === 200 && x.readyState === 4){
                                         pageContent.innerHTML =  x.responseText;
+                                        
                                     }
                                 }
                                 x.open("GET", "./src/content/pedidos/cart.php");
@@ -265,3 +269,19 @@ menuItems.forEach(
     }
 );
  */
+
+ function createOrdeListFunctionality(){
+     console.log("Test");
+     a = document.querySelectorAll(".add-to-order-button");
+     a.forEach(
+        function(element){
+            element.addEventListener(
+                "click",
+                () => {
+                    console.log("asd");
+                }
+            )
+        }
+     );
+
+}
