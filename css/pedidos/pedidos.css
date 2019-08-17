@@ -66,3 +66,70 @@
     background-color: var(--color-principal);
 }
 
+.cant-product{
+    text-align: center;
+    border: 1px solid orange;
+    border-radius: 5px;
+    height: 50px; 
+}
+/* Input  */
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .cant-product {
+    border: 2px solid #ddd;
+    display: inline-flex;
+  }
+  
+  .cant-product,
+  .cant-product * {
+    box-sizing: border-box;
+  }
+  
+  .cant-product button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+  }
+  
+  .cant-product button:before,
+  .cant-product button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+  }
+  .cant-product button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  
+  .cant-product input[type=number] {
+    font-family: sans-serif;
+    max-width: 5rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 2rem;
+    height: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }

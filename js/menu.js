@@ -269,16 +269,22 @@ menuItems.forEach(
     }
 );
  */
-
+let selectedPoducts = [];
  function createOrdeListFunctionality(){
-     console.log("Test");
-     a = document.querySelectorAll(".add-to-order-button");
+    console.log("Test");
+    
+    var a = document.querySelectorAll(".add-to-order-button");
      a.forEach(
         function(element){
             element.addEventListener(
                 "click",
                 () => {
-                    console.log("asd");
+                    var cant = document.querySelector('#cant-product-' + element.getAttribute("value"));
+                    console.log(cant.value);
+                    for(var i=0; i < cant.value; i++){
+                        selectedPoducts.push(Number.parseInt(element.getAttribute("value")));
+                    }
+                    console.log(selectedPoducts);
                 }
             )
         }
