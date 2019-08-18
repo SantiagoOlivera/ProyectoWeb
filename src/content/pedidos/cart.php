@@ -1,7 +1,10 @@
 <?php
+    $cart_elements = $_GET['cartElements'];
+    echo $cart_elements;
     echo "Funciona";
 ?>
 <div id="cart" class="cart">
+    
     <h1>Su Pedido</h1>
 
     <div class="cart-items">

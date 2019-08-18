@@ -152,7 +152,7 @@ menuItems.forEach(
                                         
                                     }
                                 }
-                                x.open("GET", "./src/content/pedidos/cart.php");
+                                x.open("GET", "./src/content/pedidos/cart.php?cartElements=" + localStorage.getItem("cartElements"));
                                 x.send();
                             }
                            
@@ -270,7 +270,7 @@ menuItems.forEach(
 );
  */
 let selectedPoducts = [];
- function createOrdeListFunctionality(){
+function createOrdeListFunctionality(){
     console.log("Test");
     
     var a = document.querySelectorAll(".add-to-order-button");
@@ -286,27 +286,33 @@ let selectedPoducts = [];
                     }
                     console.log(selectedPoducts);
                     //convertir a JSON los elementos seleccionados
+                    
+                    //ordernar vector 
                     selectedPoducts.sort();
                     console.log(selectedPoducts);
-
+                    //agrupar para obtener el cantidad total de cada uno
                     var cont = 1;
-                    var c = [];
+                    var groupedProducts = [];
                     for(var i=0;  i < selectedPoducts.length; i++){
                         if( i < selectedPoducts.length & selectedPoducts[i]===selectedPoducts[i+1]){
                             cont++;
                         }else{
+                            var fila = [];
                             console.log(selectedPoducts[i]);
                             console.log(cont);
+
+                            fila.push(selectedPoducts[i],cont);
+                            groupedProducts.push(fila);
                             cont = 1;
-                        }
+                        }    
                         //JSON with...
                         //id product
                         //cant
                         //var cartElementsJSON = ` ${ selectedPoducts[i] } `;
-                    } 
-                    
+                    }
+                    console.log(groupedProducts);
 
-                    localStorage.setItem("cartElements", "");
+                    localStorage.setItem("cartElements", JSON.stringify(groupedProducts));
                 }
             )
         }
