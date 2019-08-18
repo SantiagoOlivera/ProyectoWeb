@@ -38,7 +38,7 @@
 
             <div class="cant-product">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                <input id="<?php echo 'cant-product-'. $reg['id_producto']; ?>" class="quantity" min="0" name="quantity" value="1" type="number">
+                <input id="<?php echo 'cant-product-'. $reg['id_producto']; ?>" class="quantity" min="1" name="quantity" value="1" type="number">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
             </div>
 

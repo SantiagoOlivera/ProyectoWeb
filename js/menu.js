@@ -285,6 +285,28 @@ let selectedPoducts = [];
                         selectedPoducts.push(Number.parseInt(element.getAttribute("value")));
                     }
                     console.log(selectedPoducts);
+                    //convertir a JSON los elementos seleccionados
+                    selectedPoducts.sort();
+                    console.log(selectedPoducts);
+
+                    var cont = 1;
+                    var c = [];
+                    for(var i=0;  i < selectedPoducts.length; i++){
+                        if( i < selectedPoducts.length & selectedPoducts[i]===selectedPoducts[i+1]){
+                            cont++;
+                        }else{
+                            console.log(selectedPoducts[i]);
+                            console.log(cont);
+                            cont = 1;
+                        }
+                        //JSON with...
+                        //id product
+                        //cant
+                        //var cartElementsJSON = ` ${ selectedPoducts[i] } `;
+                    } 
+                    
+
+                    localStorage.setItem("cartElements", "");
                 }
             )
         }
