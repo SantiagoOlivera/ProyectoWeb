@@ -269,7 +269,7 @@ menuItems.forEach(
     }
 );
  */
-let selectedPoducts = [];
+let selectedProducts = [];
 function createOrdeListFunctionality(){
     console.log("Test");
     
@@ -279,40 +279,41 @@ function createOrdeListFunctionality(){
             element.addEventListener(
                 "click",
                 () => {
-                    var cant = document.querySelector('#cant-product-' + element.getAttribute("value"));
-                    console.log(cant.value);
-                    for(var i=0; i < cant.value; i++){
-                        selectedPoducts.push(Number.parseInt(element.getAttribute("value")));
-                    }
-                    console.log(selectedPoducts);
-                    //convertir a JSON los elementos seleccionados
                     
-                    //ordernar vector 
-                    selectedPoducts.sort();
-                    console.log(selectedPoducts);
-                    //agrupar para obtener el cantidad total de cada uno
-                    var cont = 1;
-                    var groupedProducts = [];
-                    for(var i=0;  i < selectedPoducts.length; i++){
-                        if( i < selectedPoducts.length & selectedPoducts[i]===selectedPoducts[i+1]){
-                            cont++;
+                    var newCartItem = [];
+                    
+                    var cant = Number.parseInt(document.querySelector('#cant-product-' + element.getAttribute("value")).value);
+                    
+                    var idProduct = Number.parseInt(element.getAttribute("value"));
+
+                    console.log(cant);
+                    if(localStorage.getItem("cartElements")===null){
+                        selectedProducts = [];
+                        newCartItem.push(idProduct,cant);
+                        selectedProducts.push(newCartItem);
+                        console.log(selectedProducts);
+                    }else{
+                        selectedProducts = JSON.parse(localStorage.getItem("cartElements"));
+                        var entro = false;
+                        for(var i=0; i<selectedProducts.length; i++){
+                            if(selectedProducts[i][0]===idProduct){
+                                console.log("entro", selectedProducts[i][1], cant);
+                                entro = true;
+                                selectedProducts[i][1] =selectedProducts[i][1] + cant;
+                                console.log("=", selectedProducts[i][1]);
+                            }
+                        }
+                        if(entro === false){
+                            newCartItem.push(idProduct, cant);
+                            selectedProducts.push(newCartItem);
                         }else{
-                            var fila = [];
-                            console.log(selectedPoducts[i]);
-                            console.log(cont);
 
-                            fila.push(selectedPoducts[i],cont);
-                            groupedProducts.push(fila);
-                            cont = 1;
-                        }    
-                        //JSON with...
-                        //id product
-                        //cant
-                        //var cartElementsJSON = ` ${ selectedPoducts[i] } `;
+                        }
+                        console.log(selectedProducts);
                     }
-                    console.log(groupedProducts);
+                    localStorage.setItem("cartElements",JSON.stringify(selectedProducts));
 
-                    localStorage.setItem("cartElements", JSON.stringify(groupedProducts));
+                    document.querySelector('#cant-product-' + element.getAttribute("value")).value = 1;
                 }
             )
         }
