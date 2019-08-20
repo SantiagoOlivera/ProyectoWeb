@@ -1,11 +1,14 @@
 <?php
     if($_GET['cartElements']===null){
-        $cart_elements = $_GET['cartElements'];
+        $strCartElements = null;
     }else{
-        $cart_elements = null;
+        $strCartElements = $_GET['cartElements'];
     }
-    echo sizeof($cart_elements);
-    echo "Funciona";
+    echo $strCartElements;
+    $array = json_decode('['.str_replace("'",'"',$strCartElements).']', true);
+    echo $array;
+    //echo sizeof($cart_elements);
+    //echo "Funciona";
 ?>
 <div id="cart" class="cart">
     
@@ -18,7 +21,7 @@
             <div class="cart-item">
             <!-- elementos que se van a repetir  -->
             <?php
-                if($cart_elements)
+                if($strCartElements)
                 echo "Sin elementos";
             ?>
                 <div class="cart-item-title"></div>
