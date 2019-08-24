@@ -148,16 +148,17 @@ menuItems.forEach(
                                 x.onreadystatechange = function (){
                                     console.log(x.status);
                                     if(x.status === 200 && x.readyState === 4){
-                                        var modifiedString = localStorage.getItem("cartElements");
+                                       /*  var modifiedString = localStorage.getItem("cartElements");
                                         //modifiedString.replaceAt(0, "");
                                         //
-                                        4modifiedString.replaceAt(modifiedString.length, "");
-                                        console.log(modifiedString);
+                                        modifiedString.replaceAt(modifiedString.length, "");
+                                        console.log(modifiedString); */
 
                                         pageContent.innerHTML =  x.responseText;
                                     }
                                 }
-                                x.open("GET", "./src/content/pedidos/cart.php?cartElements=" + localStorage.getItem("cartElements"));
+                                //x.open("GET", "./src/content/pedidos/cart.php", true);
+                                x.open("GET", "./src/content/pedidos/cart.php?cartElements=" + localStorage.getItem("cartElements") , true);
                                 x.send();
                             }
                            
